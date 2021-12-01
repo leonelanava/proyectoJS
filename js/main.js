@@ -36,6 +36,16 @@ console.log("Estos son los productos menores a 50")
 console.log(Menora50)
 
 
+/* Metodo find para encontrar productos por su ID */
+
+IDingresada = parseInt (prompt("Ingrese ID del producto"));
+
+let IDencontrada = ProductosSkincare.find( producto => producto.id == IDingresada)
+console.log(IDencontrada)
+
+
+
+
 /* Filtro para encontrar productos en categoría bloqueador*/
 let CategoríaIngresada = prompt("Ingrese categoría de producto: limpiador, serum o bloqueador")
 
