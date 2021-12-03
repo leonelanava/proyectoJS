@@ -46,15 +46,13 @@ console.log(IDencontrada)
 
 
 
-/* Filtro para encontrar productos en categoría bloqueador*/
+/* Filtro para encontrar productos en categoría limpiador
 let CategoríaIngresada = prompt("Ingrese categoría de producto: limpiador, serum o bloqueador")
-
-
-/* Filtro por categoría de producto */
 let filtroLimpiador = ProductosSkincare.filter(tipo => tipo.includes("limpiador"))
-
 
 if (CategoríaIngresada = "limpiador") {
     console.log(filtroLimpiador)
 }
 
+ESTO LO COMENTÉ PORQUE NO FUNCIONA. ME AVISAS SI TIENES ALGUNA SUGERENCIA, GRACIAS.
+*/
