@@ -13,9 +13,34 @@ console.log(ProductosSkincare)
 productosHTML(ProductosSkincare, '#productosContenedor');
 
 
+/* Verificar que se cargo el dom */
+$(document).ready(function () {
+    console.log('Se cargo el Dom');
 
 
-/* BACK OFFICE  
+
+/* Agregando evento para el boton de Agregar a  carrito */
+$('.btn-agregar').click(comprarProducto);
+
+/* Almacenando datos del carrito */
+
+if ("carrito" in localStorage) {
+    let genericos=JSON.parse(localStorage.getItem('carrito'));
+    console.log(genericos);
+    for (const item of genericos) {
+        carrito.push(new Productos (item.id, item.producto, item.precio, item.img, item.cantidad));                
+    }            
+}
+console.log(carrito);
+
+/* Mostrando resultados en carrito */
+carritoHTML(carrito);
+
+});
+
+
+
+/* BACK OFFICE  - COMENTADAS POR EL MOMENTO
 
 Declaración de variables de entrada y salida - ID y Tipo 
 let busquedaID = document.getElementById("insertarIDProducto")

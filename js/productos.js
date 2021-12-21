@@ -6,6 +6,16 @@ class Productos {
         this.precio = parseFloat(precio)
         this.tipo = tipo
         this.img = img
-        this.cantidad = cantidad || 1
+        this.cantidad = cantidad || 1;
     }
+
+
+/* Metodo agregar cantidad y subtotal */
+agregarCantidad(valor) {
+    this.cantidad += valor;
+}
+subTotal() {
+    return this.cantidad * this.precio;
+}
+
 }
