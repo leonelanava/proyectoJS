@@ -31,22 +31,13 @@ if ("carrito" in localStorage) {
         carrito.push(new Productos (item.id, item.producto, item.precio, item.img, item.cantidad));                
     }            
 }
+
 console.log(carrito);
 
 /* Mostrando resultados en carrito */
+
 carritoHTML(carrito);
 
 });
 
 
-
-/* BACK OFFICE  - COMENTADAS POR EL MOMENTO
-
-Declaración de variables de entrada y salida - ID y Tipo 
-let busquedaID = document.getElementById("insertarIDProducto")
-let retornoID = document.getElementById("productoIDIngresado")
-
-let busquedaTipo = document.getElementById("insertarTipoProducto")
-let retornoTipo= document.getElementById("productoTipoIngresado")
-
-*/

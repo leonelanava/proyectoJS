@@ -51,25 +51,22 @@ function carritoHTML(ProductosSkincare){
   
   
 
-  
-
-
-
-
-
 /* FUNCIONES BACK OFFICE - COMENTADAS POR EL MOMENTO */
 
- /* Busqueda de productos por su ID 
- let busquedaID = document.getElementById("insertarIDProducto")
-IDingresada = parseInt(busquedaID.children)
-IDencontrada = Productos.find( producto => producto.id == IDingresada)
+ /* Busqueda de productos por su ID */
+let busquedaID = document.getElementById("insertarIDproducto")
+let IDingresada = busquedaID.children
+let IDencontrada = ProductosSkincare.find( producto => producto.id == IDingresada)
+
+
+
 busquedaID.onsubmit = (e) => {
     e.preventDefault();
     resultadoIDenDOM();
     console.log(IDencontrada)
 }
 
-Función para mostrar ID encontrada en DOM 
+/*  Función para mostrar ID encontrada en DOM */
 
 function resultadoIDenDOM() {
     productoIDIngresado.innerHTML="";
@@ -78,4 +75,4 @@ function resultadoIDenDOM() {
         productoIDIngresado.appendChild(divID);
     }
 
-    */
+  
