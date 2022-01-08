@@ -41,39 +41,108 @@
     </nav>
     </header>
   
+<!-- LAYOUT DE 03 COMPONENTES: MENÚ PRODUCTOS, PRODUCTOS DISPONIBLES Y CARRITO -->
 
-    <!-- PRODUCTOS DISPONIBLES -->
-
- <section>
-     <div class="container">
-         <div class="row">
-             <div class="col">
-                 <h2>Productos Disponibles</h2>
-                <div id="productosContenedor" class="card-group">
-                    <!--ACA SE GENERAN LOS PRODUCTOS-->
-                </div>
-             </div>
-         </div>
-     </div>
-
- </section>
-
- <!-- CARRITO DE COMPRAS -->
-
-
- <div class="dropdown">
-
-    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    CARRITO 
-    <span id="carritoCantidad" class="badge badge-light">0</span>
-    </button>
-
-
-    <div id="carritoProductos" class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-    <!--ACA SE GENERAN LOS ELEMENTOS DEL CARRITO-->
-    </div>
+    <section>
     
+
+          <div class="container-fluid">
+            <div class="row flex-nowrap">
+
+
+                <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-dark">
+                    <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
+                        <a href="/" class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+                            <span class="fs-5 d-none d-sm-inline">Menu</span>
+                        </a>
+                        <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
+                            <li class="nav-item">
+                                <a href="#" class="nav-link align-middle px-0">
+                                    <i class="fs-4 bi-house"></i> <span class="ms-1 d-none d-sm-inline">Home</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#submenu1" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
+                                    <i class="fs-4 bi-speedometer2"></i> <span class="ms-1 d-none d-sm-inline">Limpiadores</span> </a>
+                                <ul class="collapse show nav flex-column ms-1" id="submenu1" data-bs-parent="#menu">
+                                    <li class="w-100">
+                                        <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">Bloqueadores</span> </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">Serum</span> </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        
+                        </ul>
+                    </div>
+                </div>
+
+<!-- CONTENIDO (PRODUCTOS + CARRITO) -->
+
+  <div class="col py-3">
+ <div class="container">
+
+
+<div class="row">
+
+  <!-- TITULO  -->
+  <div class="col-lg-6 col-md-6 col-sm-12">
+    <h2 class="ms-3">Productos</h2>
+  </div>
+
+
+  <!-- FILTRO -->
+  <div class="col-lg-3 col-md-3 col-sm-12">
+    <select id="filtroProductos">
+<!-- Aqui se genera un select con filtros -->
+    </select>
+  </div>
+
+<!-- CARRITO DE COMPRAS -->
+
+  <div class="col-lg-3 col-md-3 col-sm-12">
+    <div class="position-absolute end-0 me-5 pe-5">
+
+  
+    <!-- AQUI SE GENERA EL CARRITO-->
+
+
+    <div class="dropdown">
+
+      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      CARRITO 
+      <span id="carritoCantidad" class="badge badge-light">0</span> <!-- AQUI SE MUESTRA LA CANTIDAD -->
+      </button>
+  
+   <div id="carritoProductos" class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+      <!--ACA SE GENERAN LOS ELEMENTOS DEL CARRITO-->
+   </div>
+
+  </div>
+
+
+
+  </div>
 </div>
+
+</div>
+
+
+     
+  <div class="row" id="productosContenedor">
+                <!--ACA SE GENERAN LOS PRODUCTOS-->
+  </div>
+
+  </div>
+  </div>
+            
+
+
+        </div>
+      </div>
+
+    </section>
 
 
 
