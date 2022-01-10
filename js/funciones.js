@@ -4,7 +4,7 @@
 
 function filtroTipos(lista) {
   for (const tipo of lista) {
-    $('filtroProductos').append('<option> ${tipo} </option>')
+    $('filtroProductos').append('<option> ${tipo} </option>') /* ACA NO ME AGARRA EL $TIPO */
   }
 }
 

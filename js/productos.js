@@ -10,6 +10,7 @@ class Productos {
     }
 
 
+
 /* Metodo agregar cantidad y subtotal */
 agregarCantidad(valor) {
     this.cantidad += valor;
