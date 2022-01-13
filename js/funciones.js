@@ -33,6 +33,7 @@ function comprarProducto(e){
     }else{
       existe.agregarCantidad(1);
     }
+    console.log(carrito)
     /* Se guarda en el storage */
     localStorage.setItem('carrito',JSON.stringify(carrito));
     /* Se muestra en el carrito */
@@ -42,7 +43,7 @@ function comprarProducto(e){
 /* Función para mostrar carrito en el HTML  */
 
 function carritoHTML(productos){
-  $('#carritoCantidad').html(productos.length);
+  $('#carritoCantidad').html(productos.lenght);
   $('#carritoProductos').empty();
   for (const producto of productos) {
     $("#carritoProductos").append(`
@@ -76,8 +77,27 @@ $('#filtroProductos').change(function () {
 })
 
 
-
+/*  Funcion para enviar un POST y vaciar carrito*
+function enviarCompra() {
+  $.post("https://jsonplaceholder.typicode.com/posts", JSON.stringify(carrito), function (respuesta, estado) {
+    console.log(respuesta);
+    console.log(estado);
+    //Si el post fue exitoso
+    if (estado == "success") {
+      //Modifico el texto del mensaje de notificacion
+      $("#mensajeEstado").html("Se realizó la compra");
+      //Animo el mensaje
+      $("#mensajeEstado").fadeIn(2000).fadeOut(2000);
+      //Vacio el carrito
+      $("#carritoProductos").empty();
+      $('#carritoCantidad').html("0");
+      //Elimino los datos del storage y del array
+      localStorage.clear();
+      carrito.splice(0,carrito.length);      
+    }
+  } );
   
+}
  
 
   
