@@ -1,13 +1,4 @@
 
-/* Añadiendo select de tipo de Productos */
-
-
-function filtroTipos(lista) {
-  for (const tipo of lista) {
-    $('filtroProductos').append('<option> ${tipo} </option>') /* ACA NO ME AGARRA EL $TIPO */
-  }
-}
-
 
 
 /* Función para generar productos en HTML */
@@ -56,13 +47,36 @@ function carritoHTML(productos){
   for (const producto of productos) {
     $("#carritoProductos").append(`
     <p> ${producto.producto} 
-    <span class="badge badge-warning"> $ ${producto.precio}</span>
-    <span class="badge badge-warning"> Cantidad: ${producto.cantidad}</span>
-    <span class="badge badge-warning"> Subtotal: ${producto.subTotal()}</span>                                     
+    <span class="badge bg-secondary"> $ ${producto.precio}</span>
+    <span class="badge bg-secondary"> Cantidad: ${producto.cantidad}</span>
+    <span class="badge bg-secondary"> Subtotal: ${producto.subTotal()}</span>                                     
     </p>`);
 }
 }
     
+
+/* Filtro de tipos de Producto */
+
+
+function filtroTipos(lista) {
+  $('#filtroProductos').append(`<option selected>Todos</option>`)
+  for (const tipo of lista) {
+    $('#filtroProductos').append(`<option> ${tipo} </option>`)
+  }
+}
+
+$('#filtroProductos').change(function () {
+  if (this.value != "Todos") {
+  console.log(this.value)
+  const encontradosProductos = ProductosSkincare.filter (producto => producto.tipo == this.value)
+  productosHTML(encontradosProductos, '#productosContenedor')
+} else {
+  productosHTML(ProductosSkincare, '#productosContenedor')
+}
+})
+
+
+
   
  
 

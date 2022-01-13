@@ -1,0 +1,9 @@
+[
+{"id": 1, "producto": "Limpiador en Gel", "precio": 50, "tipo": "Limpiador", "img": "https://i.ibb.co/vmL6zGK/pexels-photo-5797994.jpg"},
+{"id": 2, "producto": "Limpiador Espuma", "precio": 50, "tipo": "Limpiador", "img": "https://i.ibb.co/xS9mh79/pexels-photo-4735905.jpg"},
+{"id": 3, "producto": "Leche Limpiadora", "precio": 50, "tipo": "Limpiador", "img": "https://i.ibb.co/rxKHVwp/pexels-photo-7319145.jpg"},
+{"id": 4, "producto": "Serum Vitamina C", "precio": 50, "tipo": "Serum", "img": "https://i.ibb.co/FJJSQpm/pexels-photo-8131586.jpg"},
+ {"id": 5, "producto": "Serum Hidratante", "precio": 50, "tipo": "Serum", "img": "https://i.ibb.co/8N2YPf2/pexels-photo-5069440.jpg"},
+{"id": 6, "producto": "Bloqueador en Gel", "precio": 50, "tipo": "Bloqueador", "img": "https://i.ibb.co/vzVv0BF/pexels-photo-8155447.jpg"}                      
+]
+
