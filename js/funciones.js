@@ -1,6 +1,4 @@
 
-
-
 /* Función para generar productos en HTML */
 
 function productosHTML(Productos, id){
@@ -33,7 +31,6 @@ function comprarProducto(e){
     }else{
       existe.agregarCantidad(1);
     }
-    console.log(carrito)
     /* Se guarda en el storage */
     localStorage.setItem('carrito',JSON.stringify(carrito));
     /* Se muestra en el carrito */
@@ -43,18 +40,17 @@ function comprarProducto(e){
 /* Función para mostrar carrito en el HTML  */
 
 function carritoHTML(productos){
-  $('#carritoCantidad').html(productos.lenght);
+  $('#carritoCantidad').html(productos.length);
   $('#carritoProductos').empty();
   for (const producto of productos) {
     $("#carritoProductos").append(`
     <p> ${producto.producto} 
     <span class="badge bg-secondary"> $ ${producto.precio}</span>
     <span class="badge bg-secondary"> Cantidad: ${producto.cantidad}</span>
-    <span class="badge bg-secondary"> Subtotal: ${producto.subTotal()}</span>                                     
+    <span class="badge bg-secondary"> Subtotal: ${producto.subTotal()}</span>                                    
     </p>`);
 }
 }
-    
 
 /* Filtro de tipos de Producto */
 
@@ -75,56 +71,3 @@ $('#filtroProductos').change(function () {
   productosHTML(ProductosSkincare, '#productosContenedor')
 }
 })
-
-
-/*  Funcion para enviar un POST y vaciar carrito*
-function enviarCompra() {
-  $.post("https://jsonplaceholder.typicode.com/posts", JSON.stringify(carrito), function (respuesta, estado) {
-    console.log(respuesta);
-    console.log(estado);
-    //Si el post fue exitoso
-    if (estado == "success") {
-      //Modifico el texto del mensaje de notificacion
-      $("#mensajeEstado").html("Se realizó la compra");
-      //Animo el mensaje
-      $("#mensajeEstado").fadeIn(2000).fadeOut(2000);
-      //Vacio el carrito
-      $("#carritoProductos").empty();
-      $('#carritoCantidad').html("0");
-      //Elimino los datos del storage y del array
-      localStorage.clear();
-      carrito.splice(0,carrito.length);      
-    }
-  } );
-  
-}
- 
-
-  
-  
-
-/* FUNCIONES BACK OFFICE - COMENTADAS POR EL MOMENTO
-
-  Busqueda de productos por su ID 
-let busquedaID = document.getElementById("insertarIDproducto")
-let IDingresada = busquedaID.children
-let IDencontrada = ProductosSkincare.find( producto => producto.id == IDingresada)
-
-
-
-busquedaID.onsubmit = (e) => {
-    e.preventDefault();
-    resultadoIDenDOM();
-    console.log(IDencontrada)
-}
-
-  Función para mostrar ID encontrada en DOM 
-
-function resultadoIDenDOM() {
-    productoIDIngresado.innerHTML="";
-        let divID = document.createElement('div');
-        divID.innerHTML= "El producto encontrado es " + JSON.stringify(IDencontrada);
-        productoIDIngresado.appendChild(divID);
-    }
-    */
-  
