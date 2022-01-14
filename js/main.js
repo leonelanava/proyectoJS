@@ -2,7 +2,8 @@
 
 /* Array tipos */
 
-tiposProductos = ["limpiador", "serum", "bloqueador"]
+tiposProductos = ["Limpiador", "Serum", "Bloqueador"]
+
 
 
 /* Añadiendo los objetos al array global  */
@@ -20,6 +21,7 @@ ProductosSkincare.push(new Productos (6,"bloqueador gel", 60, tiposProductos[2],
 
 /* Añadiendo estos productos al HTML */
 productosHTML(ProductosSkincare, '#productosContenedor');
+
 
 
 /* Funcionalidad de comprar */
@@ -42,6 +44,7 @@ console.log(carrito);
 /* Mostrar información del carrito*/
 
 carritoHTML(carrito);  
+
 
 /* Mostrando filtros en HTML */
 filtroTipos(tiposProductos)
