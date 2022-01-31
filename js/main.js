@@ -18,7 +18,6 @@ ProductosSkincare.push(new Productos (6,"bloqueador gel", 60, tiposProductos[2],
 
 
 
-
 /* Añadiendo estos productos al HTML */
 productosHTML(ProductosSkincare, '#productosContenedor');
 

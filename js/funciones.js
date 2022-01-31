@@ -101,10 +101,13 @@ function registroCarrito(producto) {
 
 /* MANEJADOR DE CANTIDADES */
 
+/* Eliminar el producto del carrito */
+
 function eliminarCarrito(e){
   console.log(e.target.id);
   let posicion= carrito.findIndex(producto => producto.id == e.target.id);  
   carrito.splice(posicion,1);
+  carritoHTML(carrito)
   localStorage.setItem('carrito',JSON.stringify(carrito));
 }
 
