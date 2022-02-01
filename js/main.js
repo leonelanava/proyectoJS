@@ -10,10 +10,10 @@ tiposProductos = ["Limpiador", "Serum", "Bloqueador"]
 
 ProductosSkincare.push(new Productos (1, "Limpiador en Gel", 50, tiposProductos[0], "https://i.ibb.co/vmL6zGK/pexels-photo-5797994.jpg"));
 ProductosSkincare.push(new Productos (2, "Limpiador Espuma", 30, tiposProductos[0], "https://i.ibb.co/xS9mh79/pexels-photo-4735905.jpg"))
-ProductosSkincare.push(new Productos (3, "leche limpiadora", 40, tiposProductos[0], "https://i.ibb.co/rxKHVwp/pexels-photo-7319145.jpg"))
-ProductosSkincare.push(new Productos (4,"serum vitamina C", 70, tiposProductos[1], "https://i.ibb.co/FJJSQpm/pexels-photo-8131586.jpg"))
-ProductosSkincare.push(new Productos (5,"serum hidratante", 80, tiposProductos[1], "https://i.ibb.co/8N2YPf2/pexels-photo-5069440.jpg"))
-ProductosSkincare.push(new Productos (6,"bloqueador gel", 60, tiposProductos[2], "https://i.ibb.co/vzVv0BF/pexels-photo-8155447.jpg"))
+ProductosSkincare.push(new Productos (3, "Leche Limpiadora", 40, tiposProductos[0], "https://i.ibb.co/rxKHVwp/pexels-photo-7319145.jpg"))
+ProductosSkincare.push(new Productos (4,"Serum vitamina C", 70, tiposProductos[1], "https://i.ibb.co/FJJSQpm/pexels-photo-8131586.jpg"))
+ProductosSkincare.push(new Productos (5,"Serum hidratante", 80, tiposProductos[1], "https://i.ibb.co/8N2YPf2/pexels-photo-5069440.jpg"))
+ProductosSkincare.push(new Productos (6,"Bloqueador gel", 60, tiposProductos[2], "https://i.ibb.co/vzVv0BF/pexels-photo-8155447.jpg"))
 
 
 
