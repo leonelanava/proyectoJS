@@ -48,6 +48,7 @@ function carritoHTML(productos){
   $('#carritoCantidad').html(productos.length);
   $('#carritoProductos').empty();
 
+
    //Mostrando carrito en HTML
   for (const producto of productos) {
     $("#carritoProductos").append(registroCarrito(producto))
@@ -109,6 +110,8 @@ function eliminarCarrito(e){
   carrito.splice(posicion,1);
   carritoHTML(carrito)
   localStorage.setItem('carrito',JSON.stringify(carrito));
+  $("#mensajeEliminado").append(`<p>Se ha eliminado el producto del carrito</p>`);
+  $("#mensajeEliminado").fadeIn(2000).fadeOut(2000);
 }
 
 /* Agregar cantidad */

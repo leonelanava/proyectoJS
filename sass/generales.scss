@@ -1,0 +1,21 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+/* HEADER */
+
+header {
+    background-color: rgba(231, 245, 248, 0.658);
+    .logoCaelum {
+        width: 08vw;
+        height: 08vh;
+    }
+}
