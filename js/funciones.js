@@ -60,7 +60,7 @@ function carritoHTML(productos){
   $('.btn-sub').on('click', subCantidad);
 
      //Confirmación de compra
-  $('#carritoProductos').append("<button id='btnConfirmar'>Confirmar</button>");
+  $('#carritoProductos').append("<button id='btnConfirmar'>Realizar compra</button>");
   $("#btnConfirmar").click(enviarCompra);
     }
 
